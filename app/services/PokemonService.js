@@ -15,7 +15,9 @@ class PokemonService {
         try {
             const res = await pokeApi.get(`api/v2/pokemon/${pokemonName}`)
             console.log(res, res.data, 'this pokemon')
-
+            const newPokemon = res.data.map(poke => new Pokemon(poke))
+            AppState.setActivePokemon = newPokemon
+            console.log(AppState.activePokemon)
         } catch (error) {
             Pop.error(error)
             console.log(error)

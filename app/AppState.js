@@ -17,6 +17,9 @@ class ObservableAppState extends EventEmitter {
   /** @type {Pokemon[]} */
   pokemon = []
 
+  /** @type {Pokemon | null} */
+  activePokemon = null
+
   // Used to load initial data
   init() {
 
