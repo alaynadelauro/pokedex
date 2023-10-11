@@ -1,0 +1,5 @@
+/* BASIC STYLES HERE */
+#pokedex {
+    overflow-y: scroll;
+    max-height: 70vh
+}
